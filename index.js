@@ -6,10 +6,13 @@ const bot = new TelegramBot(token, {polling: true});
 const notes = [];
 
 
-// const Promise = require('bluebird');
-// Promise.config({
-//     cancellation: true
-// });
+bot.onText(/\/test/, function (msg, match) {
+    const userId = msg.from.id;
+    const text = match[1];
+    const time = match[2];
+    notes.push({'uid': userId, 'time': time, 'text': text});
+    bot.sendMessage(userId, 'Отлично! Я обязательно напомню, если не сдохну :)');
+});
 
 bot.onText(/\/напомни (.+) в (.+)/, function (msg, match) {
     const userId = msg.from.id;
