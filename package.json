@@ -1,0 +1,24 @@
+{
+  "name": "to-family-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cron": "^1.3.0",
+    "node-telegram-bot-api": "^0.30.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paverbool/to-family-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paverbool/to-family-bot/issues"
+  },
+  "homepage": "https://github.com/paverbool/to-family-bot#readme"
+}
