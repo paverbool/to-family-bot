@@ -6,12 +6,10 @@ const bot = new TelegramBot(token, {polling: true});
 const notes = [];
 
 
-bot.onText(/\/test/, function (msg, match) {
+bot.onText(/\/test (.+)/, function (msg, match) {
     const userId = msg.from.id;
-    const text = match[1];
-    const time = match[2];
-    notes.push({'uid': userId, 'time': time, 'text': text});
-    bot.sendMessage(userId, 'Отлично! Я обязательно напомню, если не сдохну :)');
+    const name = match[1];
+    bot.sendMessage(userId, `Спасибо, что воспользовался моим ботом, ${name} :)`);
 });
 
 bot.onText(/\/напомни (.+) в (.+)/, function (msg, match) {
